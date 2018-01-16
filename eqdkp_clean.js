@@ -3,7 +3,7 @@ $(function() {
 	$(window).on('scroll', function() {
 		var topMenu = $('#nav');
 		
-		if($(document).scrollTop() > $("#banner").height()){
+		if($(document).scrollTop() > ($("#banner").outerHeight() + $("#personalArea").outerHeight())){
 			if(!topMenu.hasClass("jsFixed")){
 				topMenu.addClass('jsFixed');
 			}
@@ -49,7 +49,7 @@ $(function() {
 	    		  open = "none";
 	    	  }
 	      },
-	      excludedElements: "label, button, input, select, textarea", // Here your list of excluded elements ...
+	      excludedElements: "label, button, input, select, textarea, table", // Here your list of excluded elements ...
 		  threshold:130
 	    });
 	}
